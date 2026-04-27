@@ -11,5 +11,5 @@ jobs:
     steps:
      - name : Checkout code
        uses : actions/checkout@v2
-     - name : Buid the docker image
-       run : docker build -t myImg .
+     - name : Build the docker image
+       run : docker build -t img .
