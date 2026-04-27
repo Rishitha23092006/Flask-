@@ -14,6 +14,6 @@ jobs:
      - name : Build the docker image
        run : docker build -t ${{secrets.DOCKER_USERNAME}}/img .
      - name : Login to Docker Hub
-       run : echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password--stdin
+       run : echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password-stdin
      - name : Push the img to Docker Hub
        run : docker push ${{secrets.DOCKER_USERNAME}}/img
